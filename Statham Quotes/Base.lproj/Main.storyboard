@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Quotes" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tIj-Lh-UIJ">
-                                <rect key="frame" x="97" y="438" width="220" height="68"/>
+                                <rect key="frame" x="97" y="419" width="220" height="68"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="68" id="ekM-fL-nzG"/>
                                 </constraints>
@@ -25,7 +25,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nK0-D2-pOE">
-                                <rect key="frame" x="171" y="590.5" width="72" height="30"/>
+                                <rect key="frame" x="171" y="571.5" width="72" height="30"/>
                                 <accessibility key="accessibilityConfiguration" label="One more"/>
                                 <state key="normal" title="One more!"/>
                                 <connections>
@@ -33,7 +33,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(c) Jason Statham" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r01-kF-edz">
-                                <rect key="frame" x="137" y="538" width="140" height="20.5"/>
+                                <rect key="frame" x="137" y="519" width="140" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -46,8 +46,8 @@
                             <constraint firstItem="tIj-Lh-UIJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bHl-qG-33M"/>
                             <constraint firstItem="tIj-Lh-UIJ" firstAttribute="centerX" secondItem="nK0-D2-pOE" secondAttribute="centerX" id="cct-QY-Pp7"/>
                             <constraint firstItem="r01-kF-edz" firstAttribute="top" secondItem="tIj-Lh-UIJ" secondAttribute="bottom" constant="32" id="dSM-Xv-gH0"/>
+                            <constraint firstItem="tIj-Lh-UIJ" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="ey7-wT-aBO"/>
                             <constraint firstItem="tIj-Lh-UIJ" firstAttribute="centerX" secondItem="r01-kF-edz" secondAttribute="centerX" id="oNf-0x-YzR"/>
-                            <constraint firstItem="tIj-Lh-UIJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="394" id="wEK-Z3-d3W"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
