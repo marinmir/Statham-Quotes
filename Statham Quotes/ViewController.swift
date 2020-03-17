@@ -35,10 +35,10 @@ class ViewController: UIViewController {
         view.addSubview(imageView)
         
         NSLayoutConstraint.activate([
-            imageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 44),
-            imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 22),
-            imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -22),
-            imageView.bottomAnchor.constraint(equalTo: view.centerYAnchor, constant: -22),
+            imageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 40),
+            imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 24),
+            imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -24),
+            imageView.bottomAnchor.constraint(equalTo: view.centerYAnchor, constant: -44),
         ])
     }
     
