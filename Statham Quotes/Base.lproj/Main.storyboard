@@ -15,40 +15,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tIj-Lh-UIJ">
-                                <rect key="frame" x="97" y="438" width="220" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Quotes" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tIj-Lh-UIJ">
+                                <rect key="frame" x="97" y="438" width="220" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="68" id="ekM-fL-nzG"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="(c) Jason Statham" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r01-kF-edz">
-                                <rect key="frame" x="137" y="466" width="140" height="23"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nK0-D2-pOE">
-                                <rect key="frame" x="165" y="497" width="84" height="44"/>
+                                <rect key="frame" x="171" y="590.5" width="72" height="30"/>
                                 <accessibility key="accessibilityConfiguration" label="One more"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="FTI-ra-rUS"/>
-                                    <constraint firstAttribute="width" constant="84" id="dkV-hg-FMF"/>
-                                </constraints>
                                 <state key="normal" title="One more!"/>
                                 <connections>
                                     <action selector="onOneMoreButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="bi2-9k-EWW"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(c) Jason Statham" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r01-kF-edz">
+                                <rect key="frame" x="137" y="538" width="140" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="tIj-Lh-UIJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="394" id="2Ma-Le-NH3"/>
-                            <constraint firstItem="nK0-D2-pOE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3el-kf-Lyg"/>
-                            <constraint firstItem="nK0-D2-pOE" firstAttribute="top" secondItem="r01-kF-edz" secondAttribute="bottom" constant="8" id="5T5-Ni-QtK"/>
-                            <constraint firstItem="nK0-D2-pOE" firstAttribute="centerX" secondItem="r01-kF-edz" secondAttribute="centerX" id="Kz9-wM-jvD"/>
-                            <constraint firstItem="nK0-D2-pOE" firstAttribute="centerX" secondItem="tIj-Lh-UIJ" secondAttribute="centerX" id="m4P-dy-X7C"/>
-                            <constraint firstItem="tIj-Lh-UIJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="97" id="sHs-7E-vu3"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nK0-D2-pOE" secondAttribute="bottom" constant="321" id="vwN-Sz-ESY"/>
+                            <constraint firstItem="tIj-Lh-UIJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="97" id="M1t-At-cyi"/>
+                            <constraint firstItem="nK0-D2-pOE" firstAttribute="top" secondItem="r01-kF-edz" secondAttribute="bottom" constant="32" id="Wxq-si-Jgg"/>
+                            <constraint firstItem="tIj-Lh-UIJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bHl-qG-33M"/>
+                            <constraint firstItem="tIj-Lh-UIJ" firstAttribute="centerX" secondItem="nK0-D2-pOE" secondAttribute="centerX" id="cct-QY-Pp7"/>
+                            <constraint firstItem="r01-kF-edz" firstAttribute="top" secondItem="tIj-Lh-UIJ" secondAttribute="bottom" constant="32" id="dSM-Xv-gH0"/>
+                            <constraint firstItem="tIj-Lh-UIJ" firstAttribute="centerX" secondItem="r01-kF-edz" secondAttribute="centerX" id="oNf-0x-YzR"/>
+                            <constraint firstItem="tIj-Lh-UIJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="394" id="wEK-Z3-d3W"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
