@@ -9,43 +9,55 @@
 import UIKit
 
 class ViewController: UIViewController {
+
     // MARK: - Properties
-    static let stathamImage = UIImage(named: "Jason Statham")
-    let imageView = UIImageView(image: ViewController.stathamImage)
-    
-    let quotes = [
-        "If you got a good imagination, a lot of confidence and you kind of know what you are saying, then you might be able to do it. I know a lot of colorful characters at home that would make great actors.",
-        "I don't do isolation body building; I just do practical things that help me with the kind of things that are asked of me in action movies. You know, a lot of kick boxing, a lot of sparring.",
-        "Once you expose your private life, if you give one little bit, the floodgates are open and everyone's got a free range for you.",
-        "Every single day has a different combination of exercises. It always changes, and that's what keeps things interesting.",
-        "I love people who have a good sense of humor, tell a good story, tell a good joke.",
-        "When I'm getting ready for a movie, let's just say my diet is 'The Antisocial Diet.' I don't go to restaurants. I don't eat what I really want to eat. I don't eat much. I eat small things frequently. Lots of protein and greens. And I don't eat with people, because there's a tendency to get social and then to overeat.",
-    ]
-    
-    @IBOutlet var quoteLabel: UILabel?
-    
+    private let imageView = UIImageView(image: #imageLiteral(resourceName: "Jason Statham"))
+    @IBOutlet private var quoteLabel: UILabel!
+
+    //Вынесем цитаты в отдельный файл для улучшения читабельности кода.
+    let quotes: [String] = {
+        let path = Bundle.main.path(forResource: "Quotes", ofType: nil)!
+        let text = try? String(contentsOfFile: path, encoding: .utf8)
+        return text?.split(separator: "\n").map { String($0) } ?? []
+    }()
+
     // MARK: - Public methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
-        quoteLabel?.text = quotes[0]
-        
+        setup()
+    }
+
+}
+
+// MARK: - Pivate
+private extension ViewController {
+
+    func setup() {
+        //Если массив quotes окажется пустым приложение упадет если использвать quotes[0]
+        quoteLabel?.text = quotes.first
+
+        //scaleAspectFit пропорционально уменьшит картинку до размеров view в котором оно находится.
+        imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(imageView)
-        
+
         NSLayoutConstraint.activate([
-            imageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 40),
-            imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 24),
-            imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -24),
-            imageView.bottomAnchor.constraint(equalTo: view.centerYAnchor, constant: -44),
+            imageView.heightAnchor.constraint(equalToConstant: 328.0),
+            //view.safeAreaLayoutGuide.topAnchor: привязываем не к верху экрана а к нижней части NavigationBar вот статья на эту тему https://medium.com/yandex-maps-mobile/iphone-x-%D0%B8-%D1%82%D0%B0%D0%B9%D0%BD%D1%8B-safearea-1d2e76d15840
+            imageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 44.0),
+            imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 22.0),
+            imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -22.0)
         ])
     }
-    
+
     @IBAction func onOneMoreButton() {
-        var random = SystemRandomNumberGenerator()
-        let nextIndexOfQuotes = random.next(upperBound: UInt(quotes.count))
-        
-        quoteLabel?.text = quotes[Int(nextIndexOfQuotes)]
+        guard !quotes.isEmpty else {
+            return
+        }
+
+        //Int.random кажется проще чем то что ты использовала до этого
+        let index = Int.random(in: 0..<quotes.count)
+        quoteLabel?.text = quotes[index]
     }
+
 }

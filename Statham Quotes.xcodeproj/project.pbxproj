@@ -13,6 +13,7 @@
 		0ECFF4DC241FEABE004D2F77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ECFF4DA241FEABE004D2F77 /* Main.storyboard */; };
 		0ECFF4DE241FEABF004D2F77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ECFF4DD241FEABF004D2F77 /* Assets.xcassets */; };
 		0ECFF4E1241FEABF004D2F77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ECFF4DF241FEABF004D2F77 /* LaunchScreen.storyboard */; };
+		A53884FC24217C6A00D8D5FC /* Quotes in Resources */ = {isa = PBXBuildFile; fileRef = A53884FB24217C6A00D8D5FC /* Quotes */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		0ECFF4DD241FEABF004D2F77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0ECFF4E0241FEABF004D2F77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0ECFF4E2241FEABF004D2F77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A53884FB24217C6A00D8D5FC /* Quotes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Quotes; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				0ECFF4D6241FEABE004D2F77 /* SceneDelegate.swift */,
 				0ECFF4D8241FEABE004D2F77 /* ViewController.swift */,
 				0ECFF4DA241FEABE004D2F77 /* Main.storyboard */,
+				A53884FB24217C6A00D8D5FC /* Quotes */,
 				0ECFF4DD241FEABF004D2F77 /* Assets.xcassets */,
 				0ECFF4DF241FEABF004D2F77 /* LaunchScreen.storyboard */,
 				0ECFF4E2241FEABF004D2F77 /* Info.plist */,
@@ -128,6 +131,7 @@
 				0ECFF4E1241FEABF004D2F77 /* LaunchScreen.storyboard in Resources */,
 				0ECFF4DE241FEABF004D2F77 /* Assets.xcassets in Resources */,
 				0ECFF4DC241FEABE004D2F77 /* Main.storyboard in Resources */,
+				A53884FC24217C6A00D8D5FC /* Quotes in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
