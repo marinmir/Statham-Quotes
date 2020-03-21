@@ -16,9 +16,13 @@ class ViewController: UIViewController {
 
     //Вынесем цитаты в отдельный файл для улучшения читабельности кода.
     let quotes: [String] = {
-        let path = Bundle.main.path(forResource: "Quotes", ofType: nil)!
-        let text = try? String(contentsOfFile: path, encoding: .utf8)
-        return text?.split(separator: "\n").map { String($0) } ?? []
+        guard let path = Bundle.main.path(forResource: "Quotes", ofType: nil),
+              let text = try? String(contentsOfFile: path, encoding: .utf8)
+        else {
+            return []
+        }
+        
+        return text.split(separator: "\n").map { String($0) }
     }()
 
     // MARK: - Public methods
